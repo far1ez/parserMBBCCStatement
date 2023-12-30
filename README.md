@@ -89,7 +89,7 @@ Simple parser to convert MBB's credit card monthly statement to CSV.
 3. Download your MBB current/savings account statement
 4. Run [mbb_ccstatement_parser.py](mbb_ccstatement_parser.py)
     ```
-    python mbb_ccstatement_parser.py -pw <PDF password> <statement filename>
+    python mbb_ccstatement_parser.py --password <PDF password> <statement filename>
     ```
 5. If no errors, the corresponding CSV file will be generated in the same directory
    <i>(parser will overwrite any existing file)</i>
@@ -99,25 +99,25 @@ Simple parser to convert MBB's credit card monthly statement to CSV.
 
 1. You can convert more than 1 file at once
    ```
-   python mbb_ccstatement_parser.py --password password statement1.pdf statement2.pdf
+   python mbb_ccstatement_parser.py --password abc123 statement1.pdf statement2.pdf
    ```
 2. You can also mass convert statements!
    ```
-   python mbb_ccstatement_parser.py --password password *.pdf
+   python mbb_ccstatement_parser.py --password abc123 *.pdf
    ```
 3. The Posting Date and Transaction Date column doesn't contain the year, so the parser will default to using the current year. However, you can manually enter the year.
    ```
-   python mbb_ccstatement_parser.py --password password --year 2023 statement1.pdf
+   python mbb_ccstatement_parser.py --password abc123 --year 2023 statement1.pdf
    ```
 4. Sometimes parsing could include unwanted page(s) at the end. You can set the number of pages to parse.
    ```
-   python mbb_ccstatement_parser.py --password password --pages 3 statement1.pdf
+   python mbb_ccstatement_parser.py --password abc123 --pages 3 statement1.pdf
    ```
    
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
+- [ ] Add Changelog
 
 <!-- LICENSE -->
 ## License
